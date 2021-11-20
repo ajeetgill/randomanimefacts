@@ -15,10 +15,10 @@ A simple webpage which I started just to learn how to use APIs with fetch in jav
 - stores the data in local storage.
 
 
-
+## Things done from improvements
+- Open graph cards
 ## Things to improve upon
 
 - instead of blank screen loading when fetching data from API, I can show loading cards as placeholder which get populated as data is fetched.
 - PWA?
 - Dark mode
-- Open graph cards
