@@ -21,3 +21,4 @@ A simple webpage which I started just to learn how to use APIs with fetch in jav
 - instead of blank screen loading when fetching data from API, I can show loading cards as placeholder which get populated as data is fetched.
 - PWA?
 - Dark mode
+- Open graph cards

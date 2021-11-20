@@ -86,6 +86,8 @@ async function renderAnimeCards() {
 
 function clearLocalStorage() {
     console.log('cleared local storage :)');
+    document.querySelector(`.random__name`).innerHTML = `One Piece`;
+    document.querySelector(`.random__fact`).innerHTML = `It's best anime ever🧡`;
     localStorage.clear();
 }
 
