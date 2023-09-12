@@ -4,6 +4,7 @@
  * 2. deploy backend code on Firebase Cloud Functions (IF CARD NEEDED, SOMEWHERE ELSE)
  * 3. for PRACTICE : learn how to deploy node project in general
  * 4. do the same thing but with NEXT.js
+ * 5. Deploy POSTgres with using environment variables
  */
 let isLocalhost = false;
 if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
