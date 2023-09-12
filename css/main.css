@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: Roboto;
 }
 
@@ -14,12 +14,11 @@ body {
   font-family: Roboto;
   text-align: center;
   padding: 1rem;
-  font-family: 'Cambria, Georgia, serif';
+  font-family: "Cambria, Georgia, serif";
   font-size: 10vmin;
   font-weight: bolder;
   text-transform: uppercase;
 }
-
 .hero__icon {
   width: 10vmin;
   vertical-align: middle;
@@ -28,64 +27,54 @@ body {
 .random {
   text-align: center;
   z-index: 999;
-  background-color: #000000c4;
+  background-color: rgba(0, 0, 0, 0.768627451);
   width: 82%;
   padding: 0.25em;
   margin: auto;
   border-radius: 5px;
   border: 1px solid gray;
-  position: -webkit-sticky;
   position: sticky;
   top: 6vh;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   color: white;
 }
-
 .random__title {
-  font-size: .8em;
-  letter-spacing: .05em;
+  font-size: 0.8em;
+  letter-spacing: 0.05em;
   margin: 0;
   padding: 0;
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
 }
-
 .random__name {
   text-transform: capitalize;
   margin-bottom: 0;
 }
-
 .random__fact {
-  padding: .5em;
+  padding: 0.5em;
 }
 
 #allAnime {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 1em;
   place-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   padding: 2em;
 }
-
 #allAnime .card {
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   padding-bottom: 1em;
   border: 1px solid grey;
   max-width: 300px;
   border-radius: 5px;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  transition: all 0.2s;
 }
-
 #allAnime .card__title {
   padding-top: 0;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  font-size: 0.85rem;
   font-family: Montserrat;
 }
-
 #allAnime .card__image {
   min-width: 200px;
   min-height: 150px;
@@ -96,64 +85,47 @@ body {
      object-position: top;
   border-radius: 10px;
 }
-
 #allAnime .card:hover {
   color: #000;
   background-color: #f5f7fa;
   border: 1px solid #ccc;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
-          box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-          box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  transform: scale(1.05);
 }
-
 #allAnime .card:focus {
   color: #000;
   background-color: #f5f7fa;
   border: 1px solid #ccc;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
-          box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-          box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  transform: scale(1.05);
 }
 
 .clearLocalStorage {
   margin: auto;
-  padding: .5em 2em;
+  padding: 0.5em 2em;
   text-transform: uppercase;
   color: #555;
-  border: .5px solid #ccc;
+  border: 0.5px solid #ccc;
   border-radius: 5px;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
   display: block;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  transition: all 0.2s;
   cursor: pointer;
   margin-bottom: 2em;
 }
-
 .clearLocalStorage:hover {
   color: #000;
   background-color: #f5f7fa;
   border: 1px solid #ccc;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
-          box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-          box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
-
 .clearLocalStorage:focus {
   color: #000;
   background-color: #f5f7fa;
   border: 1px solid #ccc;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
-          box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-          box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
-/*# sourceMappingURL=main.css.map */
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}/*# sourceMappingURL=main.css.map */

@@ -1,3 +1,21 @@
+/**
+ * @todo
+ * 1. deploy the postgres db live
+ * 2. deploy backend code on Firebase Cloud Functions (IF CARD NEEDED, SOMEWHERE ELSE)
+ * 3. for PRACTICE : learn how to deploy node project in general
+ * 4. do the same thing but with NEXT.js
+ */
+let isLocalhost = false;
+if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+    isLocalhost = true;
+}
+const animeAPIUrl = `${
+    isLocalhost
+    ? "http://localhost:4000"
+    : "https://anime-facts-rest-api.herokuapp.com"
+}/api/v1`;
+
+
 let animeList;
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -21,7 +39,10 @@ async function getRandomFact(animeID) {
     //// store the facts in localstorage
     // return random fact from localstorage
     if (!localStorage.getItem(animeID)) {
-        await fetchAndStoreRandomFacts(animeID);
+        await fetchAndStoreRandomFacts(animeID).catch((e) => {
+            console.error(e);
+            console.error(`caught error-1`);
+        });
     }
     let randomFacts = JSON.parse(localStorage.getItem(animeID));
     let randomNumber = Math.floor(Math.random() * randomFacts.length);
@@ -44,16 +65,20 @@ function showRandomFact(e) {
     })
 }
 async function fetchAndStoreRandomFacts(animeID) {
-    const factAPIUrl = `https://anime-facts-rest-api.herokuapp.com/api/v1/`;
-    let f = await fetch(`${factAPIUrl}${animeID}`);
+    let f = await fetch(`${animeAPIUrl}/${animeID}`).catch((e) => {
+        console.error(e);
+        console.error(`caught error-2`);
+    });
     await f.json().then(facts => {
         localStorage.setItem(animeID, JSON.stringify(facts.data))
     })
 }
 
 async function fetchAnimeList() {
-    const animeAPIUrl = `https://anime-facts-rest-api.herokuapp.com/api/v1`;
-    let r = await fetch(animeAPIUrl);
+    let r = await fetch(animeAPIUrl).catch((e) => {
+        console.error(e);
+        console.error(`caught error-3`);
+    });
     let result = await r.json().then((e) => { return e.data });
     return result;
 }
